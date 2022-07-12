@@ -1,0 +1,454 @@
+@import url("https://fonts.google.com/specimen/Epilogue");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+  list-style: none;
+  transition: all 0.3s ease-in-out;
+  /* overflow-x: hidden !important; */
+}
+body {
+  font-size: 18px;
+  font-family: "Epilogue";
+  background-color: hsl(0, 0%, 94%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1.5rem 2.5rem;
+  align-items: center;
+}
+.snap {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.snap button {
+  margin-right: 1rem;
+  padding: 0.5rem;
+  font-size: 13px;
+  color: hsl(0, 0%, 8%);
+}
+.ssn {
+  margin-right: 4rem;
+  padding: 0;
+}
+
+.log {
+  margin-right: 1.5rem;
+}
+
+.reg {
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.reg:hover {
+  background-color: black;
+  color: white;
+}
+button:hover {
+  color: hsl(0, 0%, 41%);
+}
+
+/********************************TOGGLE SECTION**************************************/
+/**********************************************************************/
+/**********************************************************************/
+.logic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 1rem;
+  z-index: 100000;
+}
+.toggle {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  background-color: white;
+  align-items: flex-start;
+  position: absolute;
+  box-sizing: border-box;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 60%;
+  margin: 0;
+  /* padding: 2rem; */
+}
+.mmenu {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  cursor: pointer;
+}
+
+.mmenu-togg {
+  /* border: 2px solid white; */
+  width: 30px;
+  height: 2px;
+  background-color: #16161670;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.mmenu-togg::before,
+.mmenu-togg::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: #16161670;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.mmenu-togg::before {
+  transform: translateY(-8px);
+}
+.mmenu-togg::after {
+  transform: translateY(8px);
+}
+
+/* Animation */
+
+.mmenu.open .mmenu-togg {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.mmenu.open .mmenu-togg::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.mmenu.open .mmenu-togg::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+.login-2 {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: 0.5rem 1rem;
+}
+.apps {
+  margin-top: 4rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+.apps button {
+  font-size: 0.75em;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+  margin-left: 0.5rem;
+}
+.reg-2 {
+  margin-top: 1rem;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+/*********************************************************/
+/************************MAIN SECTION*********************************/
+/*********************************************************/
+.main {
+  margin: 3rem 5vw;
+  margin-bottom: 6rem;
+  height: auto;
+  max-width: 100%;
+  max-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+/* .eight-one {
+  max-width: 100%;
+  max-height: 100vh;
+  height: auto;
+  margin: auto;
+}
+
+.first,
+.second,
+.third,
+.fourth,
+.fiftho {
+  display: grid;
+  height: 100%;
+} */
+.hero {
+  max-width: 100%;
+  max-height: 100vh;
+  height: auto;
+  margin: auto;
+}
+.mego {
+  display: grid;
+  height: 100%;
+}
+.make {
+  margin-right: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.make h1 {
+  margin-top: 7rem;
+  font-family: sans-serif;
+  font-size: 5rem;
+}
+.bblc {
+  display: block;
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img {
+  margin-right: 2vw;
+}
+.more {
+  padding: 1rem 2rem;
+  font-size: 18px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+.more:hover {
+  color: black;
+  background-color: white;
+}
+.sync {
+  color: hsl(0, 0%, 41%);
+  font-size: 18px;
+  font-family: sans-serif;
+  line-height: 1.5;
+  width: 60%;
+}
+
+.empty {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 10px;
+  padding: 0.5rem;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+.empty-1 {
+  left: 7.5rem;
+  top: 4rem;
+}
+.empty button {
+  display: flex;
+  gap: 20px;
+  color: hsl(0, 0%, 41%);
+}
+.empty button:hover {
+  color: black;
+}
+.empty-2 {
+  top: 4rem;
+  left: 18rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 10px;
+  padding: 0.5rem;
+  position: absolute;
+  top: 4rem;
+  left: 18rem;
+  transition: all 0.3s ease-in-out;
+}
+.empty-3 {
+  position: static;
+  top: 4rem;
+  left: 9.5rem;
+}
+.empty-4 {
+  position: static;
+}
+.disable {
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(100%);
+  transition: all 0.3s ease-in-out;
+  box-shadow: none;
+  border: none;
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
+}
+.unvisible {
+  visibility: hidden;
+  display: none;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+.toy {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+.down .dawn {
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (max-width: 1025px) {
+  .make {
+    margin-right: 3rem;
+    gap: 1rem;
+  }
+  .make h1 {
+    margin-top: 7rem;
+    font-size: 4rem;
+  }
+  .main {
+    max-width: 100%;
+    margin: 3rem 2rem;
+  }
+  .hero {
+    max-width: 100%;
+    max-height: 100vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    margin: 1.5rem 0.5rem;
+  }
+  .snap button {
+    margin-right: 0.25rem;
+    padding: 0.5rem;
+    font-size: 13px;
+    color: hsl(0, 0%, 8%);
+  }
+  .ssn {
+    margin-right: 1rem;
+    padding: 0;
+  }
+
+  .log {
+    margin-right: 0.5rem;
+  }
+  .make h1 {
+    margin-top: 3rem;
+    font-size: 2.5rem;
+  }
+  nav * {
+    font-size: 0.8em !important;
+  }
+
+  .main {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr;
+    margin-top: 0;
+  }
+  .make {
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    flex-direction: column;
+    grid-row: 2;
+  }
+
+  .mego {
+    max-width: 65vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .bblc {
+    display: inline;
+  }
+  .sync {
+    width: 80%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .more {
+    margin-bottom: 0rem;
+  }
+  .hero {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 505px) {
+  .logic {
+    visibility: hidden;
+    display: none;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    transition: all 0.3s ease-in-out;
+  }
+}
+@media screen and (max-width: 505px) {
+  nav {
+    visibility: hidden;
+    display: none;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .logic {
+    margin: 0;
+    /* width: 80%; */
+  }
+  .logo img {
+    width: 60px;
+  }
+  .make h1 {
+    font-size: 1.5rem;
+  }
+  .main {
+    margin-bottom: 0.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main {
+    margin-left: 15rem;
+    margin-right: 15rem;
+    max-height: 80vh;
+  }
+
+  .hero {
+    max-height: 80vh;
+  }
+}
